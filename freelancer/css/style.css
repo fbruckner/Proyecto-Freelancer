@@ -18,14 +18,13 @@ html{
 }
 
 body {
-    font-family: ´Krub´, sans-serif;
+    font-family: 'Krub', sans-serif;
     min-height: 100%;
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     font-size: 16px;
-
 }
 
-h1, h2. h3 {
+h1, h2, h3 {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -40,8 +39,7 @@ h2 {
 h3 {
     color: var(--secundario);
     font-weight: 400;
-    font-size: 30px;
-    
+    font-size: 30px;    
 }
 
 p {
