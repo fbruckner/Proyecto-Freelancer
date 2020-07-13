@@ -1,0 +1,84 @@
+:root {  /* se alamacenara en la parte principal del proyecto - VARIABLE */
+    --oscuro: #212121;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+body {
+    font-family: ´Krub´, sans-serif;
+    min-height: 100%;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    font-size: 16px;
+
+}
+
+.site-header  {
+    background-color: #fed6e3;
+}
+.site-header nav {
+    max-width: 1200px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: column;    /* coloca los nav uno debajo del otro  */
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .site-header nav {
+        flex-direction: row;   /*coloca los nav uno al lado del otro */
+        justify-content: space-between;
+    }
+}
+
+.site-header nav a {
+    color: var (var(--oscuro));  /* uso la variable que defini al principio :root */
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .site-header nav a {
+        margin-bottom: 0;
+    }
+}
+.hero {
+    height: 450px;
+    background-image: url(/img/hero.jpg);   /* coloca la imagen de fondo */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero::after {
+    content:'';  /* le coloca un fondo negro con opacidad .6 para oscurecer la imagen hero.jpg */
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.contenedor-hero {
+    color: white;
+    position: relative;
+    z-index: 1;     /* esto trae el titulo por sobre el fondo negro que le agregamos sobre la imagen */
+    
+}
