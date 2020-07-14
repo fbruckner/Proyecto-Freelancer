@@ -37,6 +37,7 @@ h2 {
     font-size: 30px;
 }
 h3 {
+    margin-bottom: 10px;
     color: var(--secundario);
     font-weight: 400;
     font-size: 30px;    
@@ -192,7 +193,8 @@ form {
     margin-top: 20px;
 }
 form legend {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
     font-size: 25px;
     color: var(--primario);
     margin-top: 10px;
